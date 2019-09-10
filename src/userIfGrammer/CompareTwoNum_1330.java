@@ -2,7 +2,7 @@ package userIfGrammer;
 
 import java.util.Scanner;
 
-public class CompareTwoNum {
+public class CompareTwoNum_1330 {
 
 	public static void main(String[] args) {
 		Scanner scan = new Scanner(System.in);
