@@ -1,4 +1,4 @@
-package userIfGrammer;
+package useWhileGrammer;
 
 import java.util.*;
 
