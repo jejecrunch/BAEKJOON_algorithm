@@ -12,16 +12,18 @@ public class Maximum_2562 {
 			a[i]=s.nextInt();
 		}
 
-		int max=a[0], index=0;
+		int max=a[0];
+		int index=0;
 
 		for(int i=1;i<a.length;i++) {
 			if(a[i]>max) {
 				max=a[i];
-				index=i+1;
+				index=i;
 			}
 		}
 
-		System.out.println(max+"\n"+index);
+		System.out.println(max);
+		System.out.println(index+1);
 	}
 
 }
