@@ -1,4 +1,4 @@
-package Array_1;
+package useOneDimensionalArray;
 
 import java.io.*;
 
