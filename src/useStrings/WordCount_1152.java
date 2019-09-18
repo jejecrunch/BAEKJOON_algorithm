@@ -1,5 +1,6 @@
 package useStrings;
 
+
 import java.util.Scanner;
 
 public class WordCount_1152 {

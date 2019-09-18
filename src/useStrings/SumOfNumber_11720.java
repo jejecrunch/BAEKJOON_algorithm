@@ -1,4 +1,4 @@
-package useForGrammar;
+package useStrings;
 
 import java.util.Scanner;
 
