@@ -11,14 +11,17 @@ public class FindAlphabet_10809 {
 		
 		for(int i=0;i<s.length();i++) {
 			for(int j=0;j<check.length;j++) {
-				if(s.contains(Integer.toString(j+97))) {
-					check[j]=s.indexOf(Integer.toString(j+97));
+				char che = (char) (j+97);
+				if(s.contains(String.valueOf(che))) {
+					check[j]=s.indexOf(che);
 				} else {
 					check[j]=-1;
 				}
-				System.out.print(check[j]+" ");
 			}
 		}
+		
+		for(int i=0;i<check.length;i++)
+			System.out.print(check[i]+" ");
 	}
 
 }
