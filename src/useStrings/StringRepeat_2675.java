@@ -7,25 +7,19 @@ public class StringRepeat_2675 {
 		Scanner c = new Scanner(System.in);
 		
 		int t = c.nextInt();
-		char[] result;
-		char[] a;
-		
 		for(int i=0;i<t;i++) {
 			int r = c.nextInt();
-			String s = c.next();
+			String s = c.nextLine();
 			
-			a = s.toCharArray();
-			result=new char[r*a.length];
-			for(int j=0;j<a.length;j++) {
-				for(int k=0;k<result.length;k=k+r) {
-					result[k]=a[j];
-					System.out.print(result[k]);
-				}
+			String result="";
+			for(int j=0;j<s.length();j++) {
+				for(int k=0;k<r;k=k++)
+					result += s.charAt(j);
 			}
-			
-			System.out.println();
+			result=result.replaceAll(" ", "");
+			System.out.println(result);
 		}
-		
+		c.close();
 	}
 
 }
