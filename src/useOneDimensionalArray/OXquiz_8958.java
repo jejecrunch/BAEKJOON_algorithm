@@ -6,24 +6,27 @@ public class OXquiz_8958 {
 	public static void main(String[] args) {
 		Scanner s = new Scanner(System.in);
 		int c = s.nextInt(); // 테스트 개수
-		String[] test = new String[c]; 
+		
+		int[] result = new int[c]; 
 
+		s.nextLine(); // 테스트 개수 제외하고 입력받기 위함
+		
+		int count;
 		for(int i=0;i<c;i++) {
-			test[i]=s.nextLine();
-		}
-		s.close();
-
-		int count, total;
-		for(String x : test) {
+			String tmp = s.nextLine();
 			count=0;
-			total=0;
-			for(int i=0;i<x.length();++i) {
-				if(x.charAt(i)=='O')
-					total+= ++count;
+			
+			for(int j=0;j<tmp.length();++j) {
+				if(tmp.charAt(j)=='O') {
+					result[i] += ++count;
+				}
 				else
 					count = 0;
 			}
-			System.out.println(total);
+		}
+		
+		for(int i=0;i<c;i++) {
+			System.out.println(result[i]);
 		}
 	}
 
