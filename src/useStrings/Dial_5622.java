@@ -6,6 +6,7 @@ public class Dial_5622 {
 
 	public static void main(String[] args) {
 		Dial d = new Dial();
+		d.setDial();
 		Scanner scan = new Scanner(System.in); 
 		String input=scan.nextLine().trim();
 		input=input.toLowerCase();
