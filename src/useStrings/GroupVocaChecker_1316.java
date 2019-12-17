@@ -7,10 +7,29 @@ public class GroupVocaChecker_1316 {
 	public static void main(String[] args) {
 		Scanner scan = new Scanner(System.in); 
 		int wc = scan.nextInt();
-		String[] input = new String[wc];
+		int count = 0;
 		
-		for(int i=0;i<wc;i++) input[i]=scan.next();
-		scan.close();
+		while(wc-- > 0) {
+			String word = scan.next().trim();
+			if(check(word)) {
+				count++;
+			}
+		}
+		
+		System.out.print(count);
+	}
+	
+	private static boolean check(String input) {
+		boolean[] al = new boolean[26];
+		
+		for(int i=0;i<input.length();i++) {
+			char temp = input.charAt(i);
+			if(al[temp-'a']) {
+				return false;
+			} else {
+				if()
+			}
+		}
 	}
 
 }
