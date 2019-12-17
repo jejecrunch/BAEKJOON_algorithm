@@ -8,6 +8,7 @@ public class HanNumber_1065 {
 		Scanner scan = new Scanner(System.in); 
 		int n = scan.nextInt();
 		System.out.print(hanNum(n));
+		scan.close();
 	}
 
 	private static int hanNum(int input) {
