@@ -16,7 +16,7 @@ public class FindPrimeNumber_1978 {
 
 			if(a<=1) flag=false;
 			else {
-				for(int j=2;j<=a;j++) {
+				for(int j=2;j<=a/2;j++) {
 					if(a%j==0) { // 소수가 아니면
 						flag = false;
 						break;
