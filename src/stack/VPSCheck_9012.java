@@ -6,46 +6,36 @@ import java.util.Stack;
 public class VPSCheck_9012 {
 
 	public static void main(String[] args) {
-		Stack<Character> a=new Stack<Character>();
 		Scanner scan = new Scanner(System.in);
-		String input;
-		char testCh;
-		char openPair;
-		boolean result=true;
-
 		int size = scan.nextInt();
+		
+		String input;
 
-		for(int i=0;i<size;i++) {
-			input = scan.nextLine();
+		while(size-->0) {
+			boolean result = true;
+			input = scan.next();
+			Stack<Character> a=new Stack<Character>();
+			
+			char testCh;
 			for(int j=0;j<input.length();j++) {
 				testCh=input.charAt(j);
-
-				switch(testCh) {
-				case '(':
-					a.push(testCh);
-					result=false;
-					break;
-				case ')':
+				
+				if(testCh=='(') {
+					a.push(')');
+				} else {
 					if(a.isEmpty()) {
-						result=false;
+						result = false;
 						break;
-					} else {
-						openPair = a.pop();
-						if((openPair=='(')&&(testCh!=')')) {
-							result = false;
-							break;
-						} else {
-							result = true;
-							break;
-						}
 					}
+					a.pop();
 				}
 			}
-
-			if(result == true)
+			
+			if(a.isEmpty() && result)
 				System.out.println("YES");
 			else
 				System.out.println("NO");
+
 		}
 	}
 
