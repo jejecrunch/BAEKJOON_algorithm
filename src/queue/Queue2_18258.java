@@ -13,7 +13,7 @@ public class Queue2_18258 {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
 		int size = Integer.parseInt(br.readLine()); // 명령 수 
-		Queue que = new Queue(size); 
+		Queue2 que = new Queue2(size); 
 
 		for(int i=0;i<size;i++) {
 			StringTokenizer st = new StringTokenizer(br.readLine(), " "); // 명령
@@ -39,13 +39,13 @@ public class Queue2_18258 {
 	}
 }
 
-class Queue {
+class Queue2 {
 	int[] queue;
 	int next=0;
 	int first=0;
 	BufferedWriter bw;
 
-	Queue(int n){
+	Queue2(int n){
 		queue = new int[n];
 		bw = new BufferedWriter(new OutputStreamWriter(System.out));
 	}
